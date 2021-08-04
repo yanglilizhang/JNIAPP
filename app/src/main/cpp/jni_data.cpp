@@ -19,7 +19,7 @@ Java_com_bj_gxz_jniapp_data_JNIData_data(JNIEnv *env, jobject thiz, jbyte b, jch
     LOG_D("jdouble=%lf", d);
     LOG_D("jlong=%lld", l);
 
-
+    //返回指向数组元素的指针
     jfloat *float_p = env->GetFloatArrayElements(floats, nullptr);
     jsize size = env->GetArrayLength(floats);
     for (int index = 0; index < size; index++) {

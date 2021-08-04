@@ -2,7 +2,9 @@
 // Created by Gu,Xiuzhong on 2020/9/23.
 //
 #include "common.h"
-
+/**
+ * native层捕获异常
+ */
 extern "C" JNIEXPORT void JNICALL
 Java_com_bj_gxz_jniapp_exception_JNIException_nativeInvokeJavaException(JNIEnv *env, jobject thiz) {
 
@@ -37,7 +39,9 @@ Java_com_bj_gxz_jniapp_exception_JNIException_nativeInvokeJavaException(JNIEnv *
     LOG_D("nativeInvokeJavaException exec end");
 }
 
-
+/**
+ * native层抛给java层异常
+ */
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_bj_gxz_jniapp_exception_JNIException_nativeThrowException(JNIEnv *env, jobject thiz) {

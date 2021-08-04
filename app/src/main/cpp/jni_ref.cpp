@@ -7,7 +7,6 @@ extern "C" JNIEXPORT jstring JNICALL
 Java_com_bj_gxz_jniapp_ref_JNIRef_jnilocalRef(JNIEnv *env, jobject instance) {
 
     // 局部引用
-
     jclass local_j_cls = env->FindClass("java/lang/String");
 
     // 调用public String(char[] value); 构造方法
@@ -28,7 +27,8 @@ Java_com_bj_gxz_jniapp_ref_JNIRef_jnilocalRef(JNIEnv *env, jobject instance) {
     env->DeleteLocalRef(local_j_charArr);
 
     // 也可以通过NewLocalRef函数创建 (*env)->NewLocalRef(env,local_ref);这个方法一般很少用。
-    // 函数返回后局部引用所引用的对象会被JVM自动释放，或调用DeleteLocalRef释放。(*env)->DeleteLocalRef(env,local_ref)
+    // 函数返回后局部引用所引用的对象会被JVM自动释放，或调用DeleteLocalRef释放。
+    // (*env)->DeleteLocalRef(env,local_ref)
 
     // ReleaseStringChars和GetStringChars对应
     env->ReleaseStringChars(j_str, j_char);

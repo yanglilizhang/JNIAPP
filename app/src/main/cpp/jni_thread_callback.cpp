@@ -44,7 +44,7 @@ Java_com_bj_gxz_jniapp_cb_JNIThreadCallBack_nativeInThreadCallBack(JNIEnv *env, 
 
 
 /**
- * 相当于java中线程的run方法
+ * 相当于java中线程的run方法-jni子线程中回调java中
  * @return
  */
 void *writeFile(void *args) {
